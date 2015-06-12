@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1> National Museum Database</h1>
+
+
+
+<ul>
+  <% @museums.each() do |museum| %>
+  <li><a href='/museums/<%= museum.id() %>'><%= museum.name() %></a></li>
+  <% end %>
+</ul>
+<br><br><br><br>
+
+
+    <p>Add Museum:</p>
+
+
+    <form action='/' method='post'>
+      <div class='form-group'>
+        <label for='name'>Name</label>
+        <input id='name' name='name' type='text' placeholder='name'>
+      </div>
+      <button type='submit' class='btn btn-submit'>Add</button>
+    </form>
