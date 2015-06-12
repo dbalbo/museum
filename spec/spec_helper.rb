@@ -1,0 +1,14 @@
+require('rspec')
+require('pg')
+require('museum')
+require('artwork')
+
+
+DB = PG.connect({:dbname => 'museum_test'})
+
+RSpec.configure do |config|
+  config.after(:each) do
+    DB.exec('DELETE FROM museums *;')
+    DB.exec('DELETE FROM artworks *;')
+  end
+end
