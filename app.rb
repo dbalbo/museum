@@ -6,7 +6,7 @@ also_reload('/lib/**/*.rb')
 require('pg')
 require('pry')
 
-DB = PG.connect({:dbname => 'museum'})
+DB = PG.connect({:dbname => 'museum_tracker'})
 
 
 get('/') do

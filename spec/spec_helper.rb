@@ -4,7 +4,7 @@ require('museum')
 require('artwork')
 
 
-DB = PG.connect({:dbname => 'museum_test'})
+DB = PG.connect({:dbname => 'museum_tracker_test'})
 
 RSpec.configure do |config|
   config.after(:each) do
